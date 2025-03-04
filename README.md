@@ -9,8 +9,9 @@ This project is an interactive **3D solar system** built using **Three.js**. Use
 - 💾 Save & Load configurations using Firebase Firestore
 
 ## 🛠️ Setup Instructions
+- Live Server
 
 ### **1️⃣ Clone the Repository**
 ```sh
-git clone https://github.com/YOUR_USERNAME/3D-Solar-System.git
+git clone https://github.com/HimeshSaini03/threejs-solar-system-master.git
 cd 3D-Solar-System
