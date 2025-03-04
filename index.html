@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Solar System</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        /* General Page Styling */
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #222, #111); /* Dark Space-Like Background */
+        }
+
+        /* Control Panel at Bottom */
+        #control-panel {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-329%);
+            width: 200px;
+            padding: 15px;
+            background: rgba(20, 20, 20, 0.95);
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 16px;
+            color: #ffcc00;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        select, input[type="range"], button {
+            width: 90%;
+            margin: 5px 0;
+        }
+
+        button {
+            padding: 8px;
+            font-size: 14px;
+            border: none;
+            background: #ffcc00;
+            color: black;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ffaa00;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Control Panel -->
+    <div id="control-panel">
+        <h2>Customize Your Solar System</h2>
+        <label for="planet-select">Select Planet:</label>
+        <select id="planet-select">
+            <option value="0">Mercury</option>
+            <option value="1">Venus</option>
+            <option value="2">Earth</option>
+            <option value="3">Mars</option>
+            <option value="0">Jupiter</option>
+            <option value="1">Satrun</option>
+            <option value="2">Uranus</option>
+            <option value="3">Neptune</option>
+        </select>
+
+        <label>Size: <input type="range" id="size" min="0.5" max="3" step="0.1"></label>
+        <label>Rotation Speed: <input type="range" id="rotation-speed" min="0.01" max="0.1" step="0.01"></label>
+        <label>Orbit Speed: <input type="range" id="orbit-speed" min="0.001" max="0.05" step="0.001"></label>
+    </div>
+
+    <!-- Link JavaScript -->
+    <script src="main.js"></script>
+
+</body>
+</html>
